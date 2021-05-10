@@ -8,3 +8,4 @@ Description: It basically prints the current HUF value of a Bitcoin in a nice fo
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.1
