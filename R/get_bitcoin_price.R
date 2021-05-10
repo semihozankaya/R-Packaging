@@ -5,6 +5,7 @@
 #' @importFrom checkmate assert_number
 #' @importFrom binancer binance_coins_prices
 #' @importFrom logger log_info log_error
+#' @import data.table
 #' @examples
 #' get_bitcoin_price()
 
