@@ -20,5 +20,5 @@ get_usdhufs(start_date = Sys.Date() - 30, end_date = Sys.Date(), retried = 0)
 Gets the historical USD/HUF rate
 }
 \examples{
-get_usdhuf()
+get_usdhufs(start_date = "2021-05-16", end_date = "2021-05-18")
 }

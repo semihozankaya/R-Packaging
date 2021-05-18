@@ -33,11 +33,11 @@ get_usdhuf <- function(retried = 0) {
 #' @importFrom data.table data.table
 #' @importFrom httr GET content
 #' @examples
-#' get_usdhuf()
+#' get_usdhufs(start_date = "2021-05-16", end_date = "2021-05-18")
 
 get_usdhufs <- function(start_date = Sys.Date() - 30, end_date = Sys.Date(), retried = 0) {
   tryCatch({
-    usdhuf <- response <- GET(
+    response <- GET(
       "https://api.exchangerate.host/timeseries",
       query = list(
         start_date = start_date,
@@ -55,6 +55,6 @@ get_usdhufs <- function(start_date = Sys.Date() - 30, end_date = Sys.Date(), ret
     Sys.sleep(1 + retried ^ 2)
     get_usdhufs(start_date = start_date, end_date = end_date, retried = retried + 1)
   })
-  log_info('The average USD/HUF rate over the last {end_date-start_date + 1} days is {forint(mean(usdhufs$usdhuf))}')
+  log_info('The average USD/HUF rate over the last {as.Date(end_date)-as.Date(start_date) + 1} days is {forint(mean(usdhufs$usdhuf))}')
   usdhufs
 }

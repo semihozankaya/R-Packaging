@@ -2,6 +2,7 @@
 
 export(forint)
 export(get_bitcoin_price)
+export(get_exchange_rates)
 export(get_usdhuf)
 export(get_usdhufs)
 import(data.table)
