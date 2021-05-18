@@ -7,7 +7,7 @@
 forint(x)
 }
 \arguments{
-\item{x}{number, pereferably a monetary value}
+\item{x}{numeric vector, pereferably a monetary value}
 }
 \value{
 string formated for ease of use
@@ -18,4 +18,5 @@ Formats a number to HUF
 \examples{
 forint(42)
 forint(420189567.244)
+forint(1:10)
 }
